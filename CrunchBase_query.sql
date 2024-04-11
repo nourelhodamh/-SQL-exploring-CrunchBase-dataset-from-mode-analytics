@@ -2,8 +2,9 @@
 						
 Using tutorial.crunchbase_investments and tutorial.crunchbase_companies						
 Write a query that shows a company's name, "status" (found in the Companies table), and the number of unique investors in that company. Order by the number of investors from most to fewest. Limit to only companies in the state of New York.*/
-										 			
-Answer		
+
+
+Answer*/		
 
 SELECT co.name AS "Company Name", 
 co.status AS "Status",
@@ -21,20 +22,12 @@ LIMIT 10;
 
 
 
-
-
-
-
-
-
-
-
-
-
 /*Question #2
 					
 Using tutorial.crunchbase_acquisitions and tutorial.crunchbase_companies						
 Find what were the top 10 years to found a company if you wanted acquirers from New York to buy your company without joining tables. 
+
+
 Answer*/				
 						 			
 SELECT acq.founded_year,
@@ -52,19 +45,13 @@ LIMIT 10;
 	
 
 
-
-
-
-
-
-
 /*Question #3
 						
 Write a query that joins benn.college_football_players and benn.college_football_teams to then display player names, school names and conferences for schools in the "FBS (Division I-A Teams)" division. 
-					
+
+
 Answer*/		
-				 			
-		
+				 					
 SELECT players.player_name AS "Players Name",
 teams.school_name AS "School Name",
 teams.conference AS "Conference",
@@ -75,20 +62,6 @@ FULL JOIN benn.college_football_teams AS teams
 ON players.id = teams.id
  
 Where teams.division='FBS (Division I-A Teams)';
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -123,10 +96,12 @@ LIMIT 100;
 Approach: 
 Find the total number of completed orders per each manager
 Calculate the avg rating and consider the rates
-Calculate how many ratings were provided, this is important to understand the sampling ratio behind the rates for example a manager might get 5 starts while he has only one review with 5 stars in this case considering the manager rate to be 5 is not accurate 
+Calculate how many ratings were provided, this is important 
+to understand the sampling ratio behind the rates for example a manager might get 5 starts 
+while he has only one review with 5 stars in this case considering the manager rate to be 5 is not accurate.
 
 Conclusion:
-Form the results of my approach I found that 
+From the results of my approach, I found that 
 Best account manager : 
 “Dwight Schrute” 
 Completed orders: 164
